@@ -1,6 +1,8 @@
 # Atlas Arts
 
-A personal website scaffold built with Vue 3 and Vite, designed for GitHub Pages.
+A personal website built with Vue 3 and Vite, designed for GitHub Pages. The `/gallery` page displays the artwork from `assets/images` with date-based captions, search, and an enlarged image viewer.
+
+Each source image has optimized JPEG XL, WebP, JPEG, and PNG versions in `public/art/optimized`. The gallery uses a `<picture>` element so the browser can select JPEG XL or WebP when supported, with PNG and JPEG fallbacks.
 
 ## Start locally
 
