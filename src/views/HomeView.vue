@@ -19,8 +19,13 @@
   <section id="about" class="about section">
     <p class="eyebrow">01 / A little about me</p>
     <div>
-      <h2>Making thoughtful things for a changing world.</h2>
-      <p class="section-copy">This is a starting point for my story. I’m interested in creative work, useful ideas, and the details that make an experience memorable.</p>
+      <h2>Curious by Nature, Creative by Design.</h2>
+      <div class="section-copy about-copy">
+        <p>I'm an aspiring designer, creative thinker, and technology enthusiast with a passion for exploring how things work and finding new ways to bring ideas to life.</p>
+        <p>My interests span architecture, engineering, astronomy, digital technology, art, and innovation. I enjoy experimenting with new concepts, taking on creative challenges, and combining technical knowledge with imagination to develop ideas that could make a difference.</p>
+        <p>Whether I'm exploring the possibilities of 3D printing, developing entrepreneurial concepts, studying design, or looking towards the stars, I'm always looking for something new to learn, create, or improve.</p>
+        <p>I believe curiosity is one of the most valuable tools a person can have, and I'm always eager to see where it takes me.</p>
+      </div>
     </div>
   </section>
 

@@ -48,6 +48,7 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .about { padding-block: clamp(90px, 14vw, 190px); display: grid; grid-template-columns: 1fr 2fr; gap: 6vw; border-top: 1px solid var(--line); }
 .about h2, .section-heading h2, .contact h2 { max-width: 780px; font-size: clamp(40px, 6vw, 76px); line-height: 1.05; }
 .about .section-copy { max-width: 580px; }
+.about-copy { display: grid; gap: 16px; }
 .work { padding-block: clamp(72px, 10vw, 130px); background: #f2f0e9; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 54px; }
 .section-heading h2 { font-size: clamp(40px, 5vw, 66px); }
