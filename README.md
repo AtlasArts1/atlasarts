@@ -19,4 +19,4 @@ npm run build
 
 Pushing to `main` builds and deploys the site with GitHub Actions. In the repository settings, set Pages to use **GitHub Actions** as its source.
 
-The first page has sections for an introduction, about, selected work, and contact. Replace the placeholder copy and email in `src/App.vue` with your own details.
+The home page has sections for an introduction, about, selected work, and social contacts. Update the social profile links in `src/components/SocialLinks.vue` as needed.

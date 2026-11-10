@@ -66,7 +66,11 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .contact { padding-block: clamp(100px, 16vw, 210px); text-align: center; }
 .contact h2 { margin: 24px auto 0; }
 .contact .section-copy { margin-inline: auto; }
-.contact-link { margin-top: 26px; display: inline-flex; gap: 26px; padding-bottom: 6px; border-bottom: 1px solid var(--accent); color: var(--accent); text-decoration: none; }
+.social-links { max-width: 850px; margin: 38px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.social-link { min-width: 160px; padding: 14px 16px; display: inline-flex; align-items: center; gap: 11px; border: 1px solid var(--line); background: #fffefa; text-align: left; text-decoration: none; font-size: 13px; transition: border-color .2s, color .2s, transform .2s; }
+.social-link:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.social-icon { width: 20px; height: 20px; flex: 0 0 auto; fill: currentColor; }
+.social-external { margin-left: auto; color: var(--muted); font-size: 13px; }
 .site-footer { min-height: 88px; padding: 22px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); }
 .site-footer p { color: var(--muted); font-size: 11px; }
 

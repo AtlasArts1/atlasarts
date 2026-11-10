@@ -31,9 +31,13 @@
   </section>
 
   <section id="contact" class="contact section">
-    <p class="eyebrow">03 / Say hello</p>
-    <h2>Have something in mind?</h2>
-    <p class="section-copy">I’d love to hear from you. Add your preferred contact details here.</p>
-    <a class="contact-link" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a>
+    <p class="eyebrow">03 / Find me online</p>
+    <h2>Let’s connect.</h2>
+    <p class="section-copy">Follow along or say hello on any of these platforms.</p>
+    <SocialLinks />
   </section>
 </template>
+
+<script setup>
+import SocialLinks from '../components/SocialLinks.vue'
+</script>
