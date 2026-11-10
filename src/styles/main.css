@@ -41,11 +41,9 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .intro, .section-copy { max-width: 480px; margin-top: 26px; font-size: clamp(15px, 1.35vw, 18px); line-height: 1.8; color: #66645e; }
 .button { margin-top: 34px; display: inline-flex; gap: 30px; align-items: center; padding: 15px 19px; background: var(--ink); color: var(--paper); text-decoration: none; font-size: 13px; transition: background .2s; }
 .button:hover { background: var(--accent); }
-.hero-art { position: relative; justify-self: center; width: min(36vw, 470px); aspect-ratio: 1; border-radius: 50%; background: #f0eee7; }
-.orbit { position: absolute; inset: 10%; border: 1px solid #cfcbc0; border-radius: 50%; transform: rotate(-30deg) scaleY(.58); }
-.orbit--inner { inset: 20%; transform: rotate(54deg) scaleY(.62); border-color: #bdb8aa; }
-.sun { position: absolute; width: 34%; aspect-ratio: 1; border-radius: 50%; background: var(--accent); top: 22%; right: 20%; box-shadow: 0 20px 60px #cc4c2733; }
-.art-label { position: absolute; left: 50%; bottom: 17%; transform: translateX(-50%); white-space: nowrap; font: 10px var(--mono); letter-spacing: .14em; }
+.hero-image-frame { justify-self: center; width: min(36vw, 470px); aspect-ratio: 1; overflow: hidden; background: #fff; border: 1px solid #e9e7e1; box-shadow: 0 22px 60px rgb(32 32 30 / 8%); }
+.hero-image-frame picture, .hero-image-frame img { width: 100%; height: 100%; display: block; }
+.hero-image-frame img { object-fit: contain; }
 
 .about { padding-block: clamp(90px, 14vw, 190px); display: grid; grid-template-columns: 1fr 2fr; gap: 6vw; border-top: 1px solid var(--line); }
 .about h2, .section-heading h2, .contact h2 { max-width: 780px; font-size: clamp(40px, 6vw, 76px); line-height: 1.05; }
@@ -116,7 +114,7 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
   .site-header { height: 72px; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding-block: 74px 58px; }
   .hero h1 { font-size: clamp(50px, 12vw, 78px); }
-  .hero-art { width: min(74vw, 400px); margin-top: 24px; }
+  .hero-image-frame { width: min(74vw, 400px); margin-top: 24px; }
   .about { grid-template-columns: 1fr; gap: 28px; }
   .section-heading { align-items: start; flex-direction: column; }
   .project-grid { grid-template-columns: 1fr; }

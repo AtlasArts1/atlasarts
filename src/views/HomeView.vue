@@ -6,11 +6,13 @@
       <p class="intro">A personal corner of the internet. A little about me, a selection of things I’ve made, and ways to get in touch.</p>
       <RouterLink class="button" to="/gallery">Explore the gallery <span aria-hidden="true">↗</span></RouterLink>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="orbit orbit--outer"></div>
-      <div class="orbit orbit--inner"></div>
-      <div class="sun"></div>
-      <span class="art-label">CURIOUS BY NATURE</span>
+    <div class="hero-image-frame">
+      <picture>
+        <source :srcset="`${baseUrl}hero/dragon.jxl`" type="image/jxl" />
+        <source :srcset="`${baseUrl}hero/dragon.webp`" type="image/webp" />
+        <source :srcset="`${baseUrl}hero/dragon.jpg`" type="image/jpeg" />
+        <img :src="`${baseUrl}hero/dragon.png`" alt="Purple dragon artwork with dark horns, multiple eyes, and bright yellow accents" fetchpriority="high" />
+      </picture>
     </div>
   </section>
 
@@ -40,4 +42,6 @@
 
 <script setup>
 import SocialLinks from '../components/SocialLinks.vue'
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
