@@ -1,4 +1,4 @@
-// Generated from assets/images source filenames. Rename items here when you have preferred artwork titles.
+// Generated from assets/digital art source filenames. Rename items here when you have preferred artwork titles.
 export const artworks = [
   {"id":"art-001","file":"2026-08-01 13.10.22","title":"Artwork 001","isoDate":"2026-08-01T13:10:22","dateLabel":"August 1, 2026 · 1:10 PM"},
   {"id":"art-002","file":"2026-07-16 01.36.41","title":"Artwork 002","isoDate":"2026-07-16T01:36:41","dateLabel":"July 16, 2026 · 1:36 AM"},

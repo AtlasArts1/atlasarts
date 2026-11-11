@@ -1,0 +1,16 @@
+export const artworks = [
+  {"id":"3d-001","file":"2026-04-12 01.59.16","title":"3D artwork 001","isoDate":"2026-04-12T01:59:16","dateLabel":"April 12, 2026 · 1:59 AM"},
+  {"id":"3d-002","file":"2026-04-11 23.53.26","title":"3D artwork 002","isoDate":"2026-04-11T23:53:26","dateLabel":"April 11, 2026 · 11:53 PM"},
+  {"id":"3d-003","file":"2026-04-10 21.23.58","title":"3D artwork 003","isoDate":"2026-04-10T21:23:58","dateLabel":"April 10, 2026 · 9:23 PM"},
+  {"id":"3d-004","file":"2026-04-10 21.23.56","title":"3D artwork 004","isoDate":"2026-04-10T21:23:56","dateLabel":"April 10, 2026 · 9:23 PM"},
+  {"id":"3d-005","file":"2026-04-07 17.09.28","title":"3D artwork 005","isoDate":"2026-04-07T17:09:28","dateLabel":"April 7, 2026 · 5:09 PM"},
+  {"id":"3d-006","file":"2026-04-07 01.47.58","title":"3D artwork 006","isoDate":"2026-04-07T01:47:58","dateLabel":"April 7, 2026 · 1:47 AM"},
+  {"id":"3d-007","file":"2026-04-07 01.47.52","title":"3D artwork 007","isoDate":"2026-04-07T01:47:52","dateLabel":"April 7, 2026 · 1:47 AM"},
+  {"id":"3d-008","file":"2026-04-03 01.42.59","title":"3D artwork 008","isoDate":"2026-04-03T01:42:59","dateLabel":"April 3, 2026 · 1:42 AM"},
+  {"id":"3d-009","file":"2026-04-02 16.01.46","title":"3D artwork 009","isoDate":"2026-04-02T16:01:46","dateLabel":"April 2, 2026 · 4:01 PM"},
+  {"id":"3d-010","file":"2025-12-31 14.16.56","title":"3D artwork 010","isoDate":"2025-12-31T14:16:56","dateLabel":"December 31, 2025 · 2:16 PM"},
+  {"id":"3d-011","file":"2025-12-28 11.28.21","title":"3D artwork 011","isoDate":"2025-12-28T11:28:21","dateLabel":"December 28, 2025 · 11:28 AM"},
+  {"id":"3d-012","file":"2025-11-10 21.25.50","title":"3D artwork 012","isoDate":"2025-11-10T21:25:50","dateLabel":"November 10, 2025 · 9:25 PM"},
+  {"id":"3d-013","file":"2025-11-10 21.25.44","title":"3D artwork 013","isoDate":"2025-11-10T21:25:44","dateLabel":"November 10, 2025 · 9:25 PM"},
+  {"id":"3d-014","file":"2025-10-21 15.18.50","title":"3D artwork 014","isoDate":"2025-10-21T15:18:50","dateLabel":"October 21, 2025 · 3:18 PM"},
+]

@@ -4,7 +4,7 @@
       <p class="eyebrow">Personal website · Portfolio</p>
       <h1>A space for ideas, work, and everything in between.</h1>
       <p class="intro">A personal corner of the internet. A little about me, a selection of things I’ve made, and ways to get in touch.</p>
-      <RouterLink class="button" to="/gallery">Explore the gallery <span aria-hidden="true">↗</span></RouterLink>
+      <RouterLink class="button" to="/galleries">Explore the galleries <span aria-hidden="true">↗</span></RouterLink>
     </div>
     <div class="hero-image-frame">
       <picture>
@@ -32,9 +32,9 @@
   <section class="home-gallery section">
     <div>
       <p class="eyebrow">02 / Selected work</p>
-      <h2>Browse the art gallery.</h2>
+      <h2>Browse the galleries.</h2>
     </div>
-    <RouterLink class="button" to="/gallery">View all artwork <span aria-hidden="true">↗</span></RouterLink>
+    <RouterLink class="button" to="/galleries">Choose a gallery <span aria-hidden="true">↗</span></RouterLink>
   </section>
 
   <section id="contact" class="contact section">

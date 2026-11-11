@@ -79,6 +79,8 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .home-gallery .button { flex: 0 0 auto; }
 .gallery-intro { padding-top: clamp(58px, 9vw, 112px); padding-bottom: 42px; display: flex; align-items: end; justify-content: space-between; gap: 32px; }
 .gallery-intro h1 { margin-top: 18px; font-size: clamp(58px, 9vw, 112px); }
+.gallery-back { margin-bottom: 22px; display: inline-block; color: var(--muted); text-decoration: none; font-size: 12px; }
+.gallery-back:hover { color: var(--accent); }
 .gallery-description { margin-top: 16px; color: var(--muted); font-size: 16px; }
 .gallery-search { width: min(100%, 300px); display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
 .gallery-search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; font-size: 14px; }
@@ -97,6 +99,21 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .artwork-caption h2 { font-size: 14px; letter-spacing: -.02em; }
 .artwork-caption time { font: 10px var(--mono); color: var(--muted); }
 .gallery-empty { min-height: 45vh; padding-top: 50px; color: var(--muted); }
+.gallery-switcher { padding-top: 12px; padding-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); }
+.gallery-switcher a { padding: 8px 13px; border: 1px solid var(--line); color: var(--muted); text-decoration: none; font-size: 11px; }
+.gallery-switcher a:hover, .gallery-switcher a[aria-current="page"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.galleries-intro { padding-top: clamp(68px, 10vw, 130px); padding-bottom: 48px; }
+.galleries-intro h1 { margin-top: 18px; font-size: clamp(52px, 8vw, 96px); }
+.gallery-choice-grid { padding-top: 18px; padding-bottom: clamp(90px, 12vw, 160px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.5vw, 34px); }
+.gallery-choice { min-width: 0; }
+.gallery-choice-link { display: block; text-decoration: none; }
+.gallery-choice-picture { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #eeece6; }
+.gallery-choice-picture img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.gallery-choice-link:hover .gallery-choice-picture img { transform: scale(1.035); }
+.gallery-choice-details { padding: 17px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); }
+.gallery-choice-details .eyebrow { font-size: 10px; }
+.gallery-choice-details h2 { margin-top: 8px; font-size: clamp(19px, 2vw, 26px); }
+.gallery-choice-arrow { font-size: 20px; color: var(--accent); }
 .lightbox { position: fixed; inset: 0; z-index: 20; padding: 54px 84px 30px; display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 20px; background: rgb(22 22 21 / 96%); color: #fff; }
 .lightbox-figure { min-width: 0; height: 100%; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
 .lightbox-figure picture { min-height: 0; flex: 1; display: flex; justify-content: center; align-items: center; }
@@ -123,6 +140,7 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
   .home-gallery { align-items: start; flex-direction: column; }
   .gallery-intro { align-items: start; flex-direction: column; }
   .gallery-search { width: 100%; max-width: none; }
+  .gallery-choice-grid { grid-template-columns: 1fr 1fr; }
   .artwork-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 80px; }
   .artwork-caption { display: block; }
   .artwork-caption time { margin-top: 5px; display: block; }
@@ -140,5 +158,8 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
   .artwork-caption h2 { font-size: 12px; }
   .artwork-caption time { font-size: 9px; }
   .gallery-toolbar span:last-child { max-width: 120px; text-align: right; line-height: 1.5; }
+}
+@media (max-width: 520px) {
+  .gallery-choice-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }

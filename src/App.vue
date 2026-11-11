@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterLink class="wordmark" to="/" aria-label="Atlas Arts home">ATLAS<span> / </span>ARTS</RouterLink>
     <nav aria-label="Main navigation">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/gallery">Gallery</RouterLink>
+      <RouterLink to="/galleries">Galleries</RouterLink>
       <RouterLink to="/#about">About</RouterLink>
     </nav>
   </header>

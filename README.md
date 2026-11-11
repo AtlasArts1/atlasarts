@@ -1,8 +1,9 @@
 # Atlas Arts
 
-A personal website built with Vue 3 and Vite, designed for GitHub Pages. The `/gallery` page displays the artwork from `assets/images` with date-based captions, search, and an enlarged image viewer.
+A personal website built with Vue 3 and Vite, designed for GitHub Pages. Browse the three galleries under `/galleries`: digital art, 3D art, and astronomy photos. Each has date-based captions, search, and an enlarged image viewer.
 
-Each source image has optimized JPEG XL, WebP, JPEG, and PNG versions in `public/art/optimized`. The gallery uses a `<picture>` element so the browser can select JPEG XL or WebP when supported, with PNG and JPEG fallbacks.
+Source images are kept in matching folders under `assets`. Optimized JPEG XL, WebP, JPEG, and PNG versions are in `public/art`; the browser selects the best supported format.
+The former `/gallery` address redirects to `/galleries/digital-art`.
 
 The homepage hero artwork source is `assets/hero/dragon.jpg`, with its browser-selected versions in `public/hero`.
 
