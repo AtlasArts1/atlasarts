@@ -25,6 +25,14 @@
 
   <section id="about" class="about section">
     <p class="eyebrow">01 / A little about me</p>
+    <figure class="about-illustration">
+      <picture>
+        <source :srcset="`${baseUrl}about/about-dragon-party.jxl`" type="image/jxl" />
+        <source :srcset="`${baseUrl}about/about-dragon-party.webp`" type="image/webp" />
+        <source :srcset="`${baseUrl}about/about-dragon-party.jpg`" type="image/jpeg" />
+        <img :src="`${baseUrl}about/about-dragon-party.png`" alt="Purple dragon with dark horns and yellow markings wearing an orange-and-yellow striped party hat, surrounded by colorful celebratory doodles and a purple heart" loading="lazy" decoding="async" />
+      </picture>
+    </figure>
     <div>
       <h2>Curious by Nature, Creative by Design.</h2>
       <div class="section-copy about-copy">
