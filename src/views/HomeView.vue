@@ -25,12 +25,16 @@
 
   <section id="about" class="about section">
     <figure class="about-illustration">
-      <picture>
-        <source :srcset="`${baseUrl}about/about-dragon-party.jxl`" type="image/jxl" />
-        <source :srcset="`${baseUrl}about/about-dragon-party.webp`" type="image/webp" />
-        <source :srcset="`${baseUrl}about/about-dragon-party.jpg`" type="image/jpeg" />
-        <img :src="`${baseUrl}about/about-dragon-party.png`" alt="Purple dragon with dark horns and yellow markings wearing an orange-and-yellow striped party hat, surrounded by colorful celebratory doodles and a purple heart" loading="lazy" decoding="async" />
-      </picture>
+      <button class="about-illustration-button" type="button" :aria-describedby="purrMessageVisible ? 'purr-message' : undefined" @click="petDragon">
+        <picture>
+          <source :srcset="`${baseUrl}about/about-dragon-party.jxl`" type="image/jxl" />
+          <source :srcset="`${baseUrl}about/about-dragon-party.webp`" type="image/webp" />
+          <source :srcset="`${baseUrl}about/about-dragon-party.jpg`" type="image/jpeg" />
+          <img :src="`${baseUrl}about/about-dragon-party.png`" alt="Purple dragon with dark horns and yellow markings wearing an orange-and-yellow striped party hat, surrounded by colorful celebratory doodles and a purple heart" loading="lazy" decoding="async" />
+        </picture>
+      </button>
+      <figcaption>Pet me</figcaption>
+      <span v-if="purrMessageVisible" id="purr-message" class="about-purr-message" role="status">Purr</span>
     </figure>
     <div class="about-content">
       <p class="eyebrow">01 / A little about me</p>
@@ -66,7 +70,9 @@ import SocialLinks from '../components/SocialLinks.vue'
 
 const baseUrl = import.meta.env.BASE_URL
 const corrosionMessageVisible = ref(false)
+const purrMessageVisible = ref(false)
 let corrosionMessageTimer
+let purrMessageTimer
 
 function sayHello() {
   corrosionMessageVisible.value = true
@@ -76,5 +82,16 @@ function sayHello() {
   }, 2000)
 }
 
-onBeforeUnmount(() => window.clearTimeout(corrosionMessageTimer))
+function petDragon() {
+  purrMessageVisible.value = true
+  window.clearTimeout(purrMessageTimer)
+  purrMessageTimer = window.setTimeout(() => {
+    purrMessageVisible.value = false
+  }, 2000)
+}
+
+onBeforeUnmount(() => {
+  window.clearTimeout(corrosionMessageTimer)
+  window.clearTimeout(purrMessageTimer)
+})
 </script>
