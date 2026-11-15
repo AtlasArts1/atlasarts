@@ -6,14 +6,21 @@
       <p class="intro">A personal corner of the internet. A little about me, a selection of things I’ve made, and ways to get in touch.</p>
       <RouterLink class="button" to="/galleries">Explore the galleries <span aria-hidden="true">↗</span></RouterLink>
     </div>
-    <div class="hero-image-frame">
+    <button
+      class="hero-image-frame"
+      type="button"
+      aria-label="Say hello to the dragon"
+      :aria-describedby="corrosionMessageVisible ? 'dragon-message' : undefined"
+      @click="sayHello"
+    >
       <picture>
         <source :srcset="`${baseUrl}hero/dragon.jxl`" type="image/jxl" />
         <source :srcset="`${baseUrl}hero/dragon.webp`" type="image/webp" />
         <source :srcset="`${baseUrl}hero/dragon.jpg`" type="image/jpeg" />
         <img :src="`${baseUrl}hero/dragon.png`" alt="Purple dragon artwork with dark horns, multiple eyes, and bright yellow accents" fetchpriority="high" />
       </picture>
-    </div>
+      <span v-if="corrosionMessageVisible" id="dragon-message" class="dragon-message" role="status">My name is corrosion</span>
+    </button>
   </section>
 
   <section id="about" class="about section">
@@ -46,7 +53,20 @@
 </template>
 
 <script setup>
+import { onBeforeUnmount, ref } from 'vue'
 import SocialLinks from '../components/SocialLinks.vue'
 
 const baseUrl = import.meta.env.BASE_URL
+const corrosionMessageVisible = ref(false)
+let corrosionMessageTimer
+
+function sayHello() {
+  corrosionMessageVisible.value = true
+  window.clearTimeout(corrosionMessageTimer)
+  corrosionMessageTimer = window.setTimeout(() => {
+    corrosionMessageVisible.value = false
+  }, 2000)
+}
+
+onBeforeUnmount(() => window.clearTimeout(corrosionMessageTimer))
 </script>
