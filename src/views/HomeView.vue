@@ -33,6 +33,14 @@
         <p>Whether I'm exploring the possibilities of 3D printing, developing entrepreneurial concepts, studying design, or looking towards the stars, I'm always looking for something new to learn, create, or improve.</p>
         <p>I believe curiosity is one of the most valuable tools a person can have, and I'm always eager to see where it takes me.</p>
       </div>
+      <figure class="about-illustration">
+        <picture>
+          <source :srcset="`${baseUrl}about/curious-dragon.jxl`" type="image/jxl" />
+          <source :srcset="`${baseUrl}about/curious-dragon.webp`" type="image/webp" />
+          <source :srcset="`${baseUrl}about/curious-dragon.jpg`" type="image/jpeg" />
+          <img :src="`${baseUrl}about/curious-dragon.png`" alt="Purple dragon with dark horns and yellow markings, wearing an orange striped party hat beside a purple heart" loading="lazy" decoding="async" />
+        </picture>
+      </figure>
     </div>
   </section>
 
