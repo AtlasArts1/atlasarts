@@ -9,7 +9,6 @@
     <button
       class="hero-image-frame"
       type="button"
-      aria-label="Say hello to the dragon"
       :aria-describedby="corrosionMessageVisible ? 'dragon-message' : undefined"
       @click="sayHello"
     >
@@ -17,8 +16,9 @@
         <source :srcset="`${baseUrl}hero/dragon.jxl`" type="image/jxl" />
         <source :srcset="`${baseUrl}hero/dragon.webp`" type="image/webp" />
         <source :srcset="`${baseUrl}hero/dragon.jpg`" type="image/jpeg" />
-        <img :src="`${baseUrl}hero/dragon.png`" alt="Purple dragon artwork with dark horns, multiple eyes, and bright yellow accents" fetchpriority="high" />
+        <img :src="`${baseUrl}hero/dragon.png`" alt="Close-up illustration of a purple dragon with several bright eyes, long dark horns, and yellow markings on a white background" fetchpriority="high" />
       </picture>
+      <span class="visually-hidden">Click to hear the dragon introduce itself</span>
       <span v-if="corrosionMessageVisible" id="dragon-message" class="dragon-message" role="status">My name is corrosion</span>
     </button>
   </section>

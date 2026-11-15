@@ -1,0 +1,16 @@
+export const threeDArtAlt = [
+  'Untextured gray 3D model of a small two-legged dinosaur in side view.',
+  'Untextured gray 3D model of a long-necked, four-legged dinosaur.',
+  'Rounded horned creature model shown standing with arms outstretched.',
+  'Gray 3D model of a low-top athletic shoe.',
+  '3D render of a gray retro handheld game console on a wooden table.',
+  '3D render of a compact gray handheld game console with red buttons.',
+  '3D render of a beige rectangular game console on a wooden table.',
+  '3D render of a handheld game system with blue and red controllers.',
+  'Futuristic brown storage chest with glowing pink panels.',
+  'Tall black faceless humanoid model standing against gray.',
+  'Purple-frosted doughnut on a plate beside a dark mug.',
+  'Gray 3D model of a twin-winged science-fiction spacecraft.',
+  'Dark feathered dinosaur model with a yellow crest and colored face.',
+  'Plate of colorful ring doughnuts on a light table.',
+]

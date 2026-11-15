@@ -70,13 +70,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
     <div v-if="filteredArtworks.length" class="artwork-grid section">
       <figure v-for="artwork in filteredArtworks" :key="artwork.id" class="artwork-card">
-        <button class="artwork-open" type="button" :aria-label="`View ${artwork.title}, ${artwork.dateLabel}`" @click="selected = artwork">
+        <button class="artwork-open" type="button" @click="selected = artwork">
           <picture class="artwork-picture">
             <source :srcset="imageUrl(artwork, 'jxl')" type="image/jxl" />
             <source :srcset="imageUrl(artwork, 'webp')" type="image/webp" />
             <source :srcset="imageUrl(artwork, 'jpg')" type="image/jpeg" />
-            <img :src="imageUrl(artwork, 'png')" :alt="artwork.title" loading="lazy" decoding="async" />
+            <img :src="imageUrl(artwork, 'png')" :alt="artwork.alt" loading="lazy" decoding="async" />
           </picture>
+          <span class="visually-hidden">Open larger view</span>
           <span class="artwork-zoom" aria-hidden="true">↗</span>
         </button>
         <figcaption class="artwork-caption">
@@ -97,7 +98,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           <source :srcset="imageUrl(selected, 'jxl')" type="image/jxl" />
           <source :srcset="imageUrl(selected, 'webp')" type="image/webp" />
           <source :srcset="imageUrl(selected, 'jpg')" type="image/jpeg" />
-          <img :src="imageUrl(selected, 'png')" :alt="selected.title" />
+          <img :src="imageUrl(selected, 'png')" :alt="selected.alt" />
         </picture>
         <figcaption><h2>{{ selected.title }}</h2><time :datetime="selected.isoDate">{{ selected.dateLabel }}</time></figcaption>
       </figure>

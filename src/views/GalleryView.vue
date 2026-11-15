@@ -20,7 +20,7 @@ const imageUrl = (gallery, artwork, format) => `${import.meta.env.BASE_URL}art/$
           <picture class="gallery-choice-picture">
             <source :srcset="imageUrl(gallery, gallery.artworks[0], 'jxl')" type="image/jxl" />
             <source :srcset="imageUrl(gallery, gallery.artworks[0], 'webp')" type="image/webp" />
-            <img :src="imageUrl(gallery, gallery.artworks[0], 'jpg')" :alt="`${gallery.title} preview: ${gallery.artworks[0].title}`" />
+            <img :src="imageUrl(gallery, gallery.artworks[0], 'jpg')" :alt="gallery.artworks[0].alt" />
           </picture>
           <div class="gallery-choice-details">
             <div>
