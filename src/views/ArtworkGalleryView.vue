@@ -39,11 +39,11 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 </script>
 
 <template>
-  <section class="gallery-page">
+  <section class="gallery-page" :class="`gallery-page--${category}`">
     <div class="gallery-intro section">
       <div>
         <RouterLink class="gallery-back" to="/galleries">← All galleries</RouterLink>
-        <p class="eyebrow">Atlas Arts · The collection</p>
+        <p class="eyebrow">Atlas Arts · {{ gallery.shortTitle }}</p>
         <h1>{{ gallery.title }}</h1>
         <p class="gallery-description">{{ gallery.description }}</p>
       </div>
@@ -89,7 +89,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   </section>
 
   <Teleport to="body">
-    <div v-if="selected" class="lightbox" role="dialog" aria-modal="true" :aria-label="selected.title" @click.self="selected = null">
+    <div v-if="selected" class="lightbox" :class="`lightbox--${category}`" role="dialog" aria-modal="true" :aria-label="selected.title" @click.self="selected = null">
       <button class="lightbox-close" type="button" aria-label="Close artwork viewer" @click="selected = null">×</button>
       <button class="lightbox-arrow lightbox-arrow--previous" type="button" aria-label="Previous artwork" @click="moveSelection(-1)">←</button>
       <figure class="lightbox-figure">

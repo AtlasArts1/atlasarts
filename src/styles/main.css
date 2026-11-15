@@ -99,6 +99,64 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .artwork-caption h2 { font-size: 14px; letter-spacing: -.02em; }
 .artwork-caption time { font: 10px var(--mono); color: var(--muted); }
 .gallery-empty { min-height: 45vh; padding-top: 50px; color: var(--muted); }
+
+/* Each collection has its own visual setting while sharing the same gallery tools. */
+.gallery-page--digital-art {
+  --ink: #30251f;
+  --muted: #817368;
+  --line: #e7d9ce;
+  --accent: #b95138;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 8% 14%, rgb(220 176 144 / 18%), transparent 31%), linear-gradient(145deg, #f7eee7, #fcfaf6 44%, #f1e8e0);
+}
+.gallery-page--digital-art .artwork-open { background: #f3eae3; }
+.gallery-page--digital-art .gallery-intro { position: relative; }
+.gallery-page--digital-art .gallery-intro::after { content: "01 / DIGITAL CANVAS"; position: absolute; right: var(--gutter); top: clamp(70px, 10vw, 128px); color: #c8a28d; font: 10px var(--mono); letter-spacing: .14em; }
+
+.gallery-page--3d-art {
+  --ink: #f2f1ee;
+  --muted: #b1b4bb;
+  --line: #414650;
+  --accent: #abc7d8;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 88% 12%, rgb(106 130 158 / 15%), transparent 32%), linear-gradient(145deg, #252a32, #191c22 55%, #222832);
+}
+.gallery-page--3d-art .gallery-search input::placeholder { color: #a3a8b1; }
+.gallery-page--3d-art .artwork-open { border: 1px solid #454b56; background: #20252d; }
+.gallery-page--3d-art .artwork-zoom { background: #dbe6ec; color: #222832; }
+.gallery-page--3d-art .gallery-switcher a { border-color: #4a515d; color: #c5c9cf; }
+.gallery-page--3d-art .gallery-switcher a:hover,
+.gallery-page--3d-art .gallery-switcher a[aria-current="page"] { border-color: #abc7d8; background: #abc7d8; color: #1e252d; }
+
+.gallery-page--astronomy-photos {
+  --ink: #f4f1e8;
+  --muted: #aebbd0;
+  --line: #2d3a50;
+  --accent: #e8ca82;
+  color: var(--ink);
+  background-color: #07101e;
+  background-image:
+    radial-gradient(1px 1px at 7% 13%, rgb(255 255 255 / 76%) 98%, transparent),
+    radial-gradient(1.5px 1.5px at 22% 31%, rgb(211 226 255 / 80%) 98%, transparent),
+    radial-gradient(1px 1px at 39% 18%, rgb(255 255 255 / 68%) 98%, transparent),
+    radial-gradient(1px 1px at 58% 11%, rgb(255 255 255 / 78%) 98%, transparent),
+    radial-gradient(1px 1px at 74% 34%, rgb(216 228 255 / 72%) 98%, transparent),
+    radial-gradient(1.5px 1.5px at 91% 17%, rgb(255 255 255 / 78%) 98%, transparent),
+    radial-gradient(1px 1px at 14% 64%, rgb(255 255 255 / 70%) 98%, transparent),
+    radial-gradient(1px 1px at 47% 71%, rgb(211 226 255 / 72%) 98%, transparent),
+    radial-gradient(1px 1px at 83% 78%, rgb(255 255 255 / 80%) 98%, transparent),
+    radial-gradient(ellipse at 52% 0%, rgb(47 74 119 / 35%), transparent 49%),
+    linear-gradient(180deg, #091426, #070d18 70%, #0b1422);
+  background-repeat: no-repeat;
+}
+.gallery-page--astronomy-photos .gallery-search input::placeholder { color: #aebbd0; }
+.gallery-page--astronomy-photos .artwork-open { aspect-ratio: 4 / 3; border: 1px solid #293a55; background: #030812; }
+.gallery-page--astronomy-photos .artwork-picture img { object-fit: cover; }
+.gallery-page--astronomy-photos .artwork-zoom { background: #e8ca82; color: #101725; }
+.gallery-page--astronomy-photos .gallery-switcher a { border-color: #35435a; color: #d3d9e5; }
+.gallery-page--astronomy-photos .gallery-switcher a:hover,
+.gallery-page--astronomy-photos .gallery-switcher a[aria-current="page"] { border-color: #e8ca82; background: #e8ca82; color: #121a28; }
+
 .gallery-switcher { padding-top: 12px; padding-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); }
 .gallery-switcher a { padding: 8px 13px; border: 1px solid var(--line); color: var(--muted); text-decoration: none; font-size: 11px; }
 .gallery-switcher a:hover, .gallery-switcher a[aria-current="page"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
@@ -109,6 +167,15 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .gallery-choice-link { display: block; text-decoration: none; }
 .gallery-choice-picture { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #eeece6; }
 .gallery-choice-picture img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.gallery-choice--digital-art .gallery-choice-picture { background: #efe4dc; }
+.gallery-choice--digital-art .gallery-choice-details { padding: 17px; background: #f6eee8; border-color: #e7d9ce; }
+.gallery-choice--3d-art .gallery-choice-picture { background-color: #222832; background-image: linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px), linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px); background-size: 24px 24px; }
+.gallery-choice--3d-art .gallery-choice-picture img { padding: 10%; object-fit: contain; }
+.gallery-choice--3d-art .gallery-choice-details { padding: 17px; background: #222832; color: #f2f1ee; border-color: #414650; }
+.gallery-choice--3d-art .gallery-choice-details .eyebrow { color: #b1b4bb; }
+.gallery-choice--astronomy-photos .gallery-choice-picture { background: radial-gradient(circle at 72% 22%, #60779d 0 1px, transparent 2px), radial-gradient(circle at 24% 68%, #d5dff3 0 1px, transparent 2px), linear-gradient(145deg, #101d34, #050a14); }
+.gallery-choice--astronomy-photos .gallery-choice-details { padding: 17px; background: #0b1423; color: #f4f1e8; border-color: #2d3a50; }
+.gallery-choice--astronomy-photos .gallery-choice-details .eyebrow { color: #aebbd0; }
 .gallery-choice-link:hover .gallery-choice-picture img { transform: scale(1.035); }
 .gallery-choice-details { padding: 17px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); }
 .gallery-choice-details .eyebrow { font-size: 10px; }
@@ -125,6 +192,8 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
 .lightbox-close { position: absolute; top: 18px; right: 24px; font-size: 34px; line-height: 1; }
 .lightbox-arrow { width: 48px; height: 48px; font-size: 28px; }
 .lightbox-close:hover, .lightbox-arrow:hover { color: #e28a69; }
+.lightbox--3d-art { background: rgb(16 20 27 / 97%); }
+.lightbox--astronomy-photos { background: radial-gradient(1px 1px at 18% 20%, #fff 98%, transparent), radial-gradient(1px 1px at 78% 71%, #d7e3ff 98%, transparent), radial-gradient(ellipse at 50% 0%, #142444, #060b14 70%); }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -139,6 +208,7 @@ h1, h2, h3 { letter-spacing: -0.055em; font-weight: 500; }
   .project-card { min-height: 330px; }
   .home-gallery { align-items: start; flex-direction: column; }
   .gallery-intro { align-items: start; flex-direction: column; }
+  .gallery-page--digital-art .gallery-intro::after { display: none; }
   .gallery-search { width: 100%; max-width: none; }
   .gallery-choice-grid { grid-template-columns: 1fr 1fr; }
   .artwork-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 80px; }

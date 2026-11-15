@@ -15,7 +15,7 @@ const imageUrl = (gallery, artwork, format) => `${import.meta.env.BASE_URL}art/$
     </header>
 
     <div class="gallery-choice-grid section">
-      <article v-for="gallery in galleries" :key="gallery.slug" class="gallery-choice">
+      <article v-for="gallery in galleries" :key="gallery.slug" class="gallery-choice" :class="`gallery-choice--${gallery.slug}`">
         <RouterLink class="gallery-choice-link" :to="`/galleries/${gallery.slug}`">
           <picture class="gallery-choice-picture">
             <source :srcset="imageUrl(gallery, gallery.artworks[0], 'jxl')" type="image/jxl" />
