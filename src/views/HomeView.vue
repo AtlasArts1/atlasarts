@@ -9,17 +9,22 @@
     <button
       class="hero-image-frame"
       type="button"
-      :aria-describedby="corrosionMessageVisible ? 'dragon-message' : undefined"
-      @click="sayHello"
+      @click="animateCorrosion"
     >
-      <picture>
+      <picture v-if="!corrosionAnimationVisible">
         <source :srcset="`${baseUrl}hero/dragon.jxl`" type="image/jxl" />
         <source :srcset="`${baseUrl}hero/dragon.webp`" type="image/webp" />
         <source :srcset="`${baseUrl}hero/dragon.jpg`" type="image/jpeg" />
         <img :src="`${baseUrl}hero/dragon.png`" alt="Close-up illustration of a purple dragon with several bright eyes, long dark horns, and yellow markings on a white background" fetchpriority="high" />
       </picture>
-      <span class="visually-hidden">Click to hear the dragon introduce itself</span>
-      <span v-if="corrosionMessageVisible" id="dragon-message" class="dragon-message" role="status">My name is corrosion</span>
+      <img
+        v-else
+        :key="corrosionAnimationRun"
+        :src="`${baseUrl}hero/dragon-click.gif`"
+        alt="Close-up illustration of a purple dragon with several bright eyes, long dark horns, and yellow markings, briefly animated"
+        fetchpriority="high"
+      />
+      <span class="visually-hidden">Click to see the dragon animate briefly</span>
     </button>
   </section>
 
@@ -69,16 +74,18 @@ import { onBeforeUnmount, ref } from 'vue'
 import SocialLinks from '../components/SocialLinks.vue'
 
 const baseUrl = import.meta.env.BASE_URL
-const corrosionMessageVisible = ref(false)
+const corrosionAnimationVisible = ref(false)
+const corrosionAnimationRun = ref(0)
 const purrMessageVisible = ref(false)
-let corrosionMessageTimer
+let corrosionAnimationTimer
 let purrMessageTimer
 
-function sayHello() {
-  corrosionMessageVisible.value = true
-  window.clearTimeout(corrosionMessageTimer)
-  corrosionMessageTimer = window.setTimeout(() => {
-    corrosionMessageVisible.value = false
+function animateCorrosion() {
+  corrosionAnimationRun.value += 1
+  corrosionAnimationVisible.value = true
+  window.clearTimeout(corrosionAnimationTimer)
+  corrosionAnimationTimer = window.setTimeout(() => {
+    corrosionAnimationVisible.value = false
   }, 2000)
 }
 
@@ -91,7 +98,7 @@ function petDragon() {
 }
 
 onBeforeUnmount(() => {
-  window.clearTimeout(corrosionMessageTimer)
+  window.clearTimeout(corrosionAnimationTimer)
   window.clearTimeout(purrMessageTimer)
 })
 </script>
